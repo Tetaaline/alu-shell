@@ -1,4 +1,2 @@
 #!/bin/bash
-for f in $(find . -empty); do
-    echo "${f##*/}"
-done
+find . -empty -exec basename {} \;
