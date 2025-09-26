@@ -1,2 +1,2 @@
 #!/bin/bash
-for f in $(find . -type f -name "*.gif"); do echo "${f##*/}" | cut -d. -f1; done | sort -f
+find . -type f -name "*.gif" -printf "%f\n" | sort -f | sed 's/\.gif$//'
